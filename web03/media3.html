@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-size: 50px;
+            width: 960px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        #menu {
+            width: 260px;
+            float: left;
+            background-color: chartreuse;
+        }
+
+        #content {
+            width: 700px;
+            float: right;
+            background-color: yellow;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        @media screen and (max-width: 767px) {
+
+            /* 767px작은 사이즈에서는 모두 해제 */
+            body {
+                width: auto;
+            }
+
+            #menu {
+                width: auto;
+                float: none;
+            }
+
+            #content {
+                width: auto;
+                float: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="menu">
+        <ul>
+            <li>상품소개</li>
+            <li>장바구니</li>
+            <li>추천상품</li>
+        </ul>
+    </div>
+    <div id="content">
+        <p>내용</p>
+        <p>내용</p>
+        <p>내용</p>
+        <p>내용</p>
+        <p>내용</p>
+        <p>내용</p>
+        <p>내용</p>
+        <p>내용</p>
+    </div>
+</body>
+
+</html>
