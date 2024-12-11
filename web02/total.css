@@ -1,0 +1,38 @@
+#top {
+    margin: 5px;
+    /*바깥쪽 여백*/
+    padding: 1px;
+    /*안쪽 여백 */
+    width: 500px;
+    height: 50px;
+    display: flex;
+    align-items: center; /* 세로 가운데 정렬 */
+    justify-content: center; /* 가로 가운데 정렬 */
+}
+#top2{
+    position: fixed;
+    right: 5px;
+    top: 5px;
+    background-color: black;
+    color: yellow;
+    width: 100px;
+    height: 400px;
+    border-radius: 100px 20px 100px 20px;
+    box-shadow: 5px 5px 50px gray;
+    /* 가로뒷쪽 세로아랫쪽 음영강도 색 */
+    /*
+    border-style: dotted;
+    border-color: red;
+    */
+    border : 2px dotted red;
+    display: flex;
+    align-items: center; /* 세로 가운데 정렬 */
+    justify-content: center; /* 가로 가운데 정렬 */
+}
+#content{
+    padding: 10px;
+    /* 안쪽 여백 */
+    width: 600px;
+    height: 500px;
+    background-color: pink;
+}

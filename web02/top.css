@@ -1,0 +1,35 @@
+li {
+    text-align: center;
+    list-style: none;
+    float: left;
+    width: 100px;
+    height: 50px;
+    background-color: yellow;
+    display: flex;
+    align-items: center; /* 세로 가운데 정렬 */
+    justify-content: center; /* 가로 가운데 정렬 */
+}
+
+a{
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
+
+a:hover {
+    background: lime;
+}
+li:nth-child(2n) {
+    background-color: orange;
+}
+li:nth-child(2n + 1) {
+    background-color: yellow;
+}
+li:first-child {
+    border-radius: 30px 0 0 30px;
+}
+li:last-child {
+    border-radius: 0 30px 30px 0;
+    /* 30px --> 1,2,3,4 다 이걸로 설정 */
+    /* 30px 0 --> 1,3은 30px, 2,4는 0으로 설정 */
+}
