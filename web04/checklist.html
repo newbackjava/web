@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Listener</title>
+</head>
+<body>
+    <h1>Dynamic Checkbox List</h1>
+    <form id="checkboxForm">
+        <label>
+            <input type="checkbox" name="options" value="Option 1"> Option 1
+        </label><br>
+        <label>
+            <input type="checkbox" name="options" value="Option 2"> Option 2
+        </label><br>
+        <label>
+            <input type="checkbox" name="options" value="Option 3"> Option 3
+        </label><br>
+        <label>
+            <input type="checkbox" name="options" value="Option 4"> Option 4
+        </label><br>
+    </form>
+
+    <p id="output">Checked values: </p>
+
+    <script>
+        // 체크박스 체크 상태 변경 시 실행되는 함수
+        function updateCheckedValues() {
+            // 모든 체크된 체크박스를 선택
+            const checkboxes = document.querySelectorAll('input[name="options"]:checked');
+            
+            // 체크된 값들을 배열로 변환
+            const values = Array.from(checkboxes).map(checkbox => checkbox.value);
+
+            // 화면에 출력
+            const output = document.getElementById('output');
+            output.textContent = `Checked values: ${values.join(', ')}`;
+        }
+
+        // 모든 체크박스에 이벤트 리스너 추가
+        const checkboxes = document.querySelectorAll('input[name="options"]');
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', updateCheckedValues);
+        });
+    </script>
+</body>
+</html>

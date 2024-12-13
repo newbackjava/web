@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let date = new Date();
+        //Date date = new Date(); 자바문법
+        let year = date.getFullYear();
+        let month = date.getMonth() + 1;
+        let d = date.getDate();
+        let day = date.getDay();
+        let h = date.getHours();
+        let m = date.getMinutes();
+        let s = date.getSeconds();
+        alert(year + " " + month + " " + d);
+        alert(h + " " + m + " " + s);
+        alert("요일 " + day); //일요일 0부터 시작
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

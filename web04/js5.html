@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let today = confirm("점심을 많이 드셨나요?");
+        if (today) {
+            alert("졸리시겠군요.!!!");
+        } else {
+            alert("안졸리시겠군요.!!!");
+        }
+
+        let id = prompt("아이디 입력");
+        let pw = prompt("패스워드 입력");
+        if (id == "root" && pw == "1234") { //논리연산자
+            //and(&&), or(||)
+            alert("로그인 성공");
+        } else {
+            alert("로그인 성공");
+        }
+
+        let site = prompt("자주가는 사이트 이름은?");
+        if (site == "네이버") {
+            location.href = "http://www.naver.com";
+        } else if (site == "다음") {
+            location.href = "http://www.daum.net";
+        } else{
+            document.write("해당 사이트를 갈 수 없음.");
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
