@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- p.47 AJAX(에이작스) : 비동기통신 자바스크립트 기술 -->
+     <script>
+      function getData(url) {
+        //비동기통신 구현
+        const xhr = new XMLHttpRequest();
+        //브라우저에 http://www.naver.com 엔터!
+        xhr.open("GET", url); //http지정
+        xhr.onload = function(){
+            if(xhr.status === 200){
+                console.log("성공!!>> "+ xhr.responseText);
+            }
+        };
+        xhr.send();//요청전송
+      }  
+
+      getData("https://jsonplaceholder.typicode.com/posts/1");
+     </script>
+</body>
+</html>

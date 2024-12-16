@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function greet(name) {
+            alert(name + "님 환영합니다.!")
+        }
+        function info(action) { //action에는 함수가 들어올 예정.
+            //입력받아서 
+            let name = prompt("이름 입력하세요.");
+            //action함수 호출함.
+            action(name); //
+        }
+        //info(greet); //콜백함수
+        function bye(name) {
+            alert("안녕 잘가~~!! " + name + "아!");
+        }
+        //info(bye);
+        info((x) => alert(x + "아!! 오늘은 월요일!")) //화살표함수??
+    </script>
+</body>
+
+</html>
