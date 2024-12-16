@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add(x, y) {
+            //alert(x + y);
+            return x + y;
+        }
+        function minus(x, y) {
+            //alert(x - y);
+            return x - y;//호출한 곳으로 결과값을 전달해줌.
+        }
+        function total(x, y) {
+            //더한 값--> 뺀 값 ==> 이 두개를 곱해서 프린트!
+            let a = add(x, y);
+            console.log("----> " + a);
+            let m = minus(x, y);
+            console.log("----> " + m);
+            alert(a * m);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="add(100, 200)">더하기버튼</button>
+    <button onclick="minus(100, 200)">빼기버튼</button>
+    <button onclick="total(100, 200)">더하기+빼기버튼</button>
+</body>
+</html>

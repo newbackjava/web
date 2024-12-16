@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function jeju() {
+            let img = document.getElementById("img");
+            img.src = "image1.png";
+
+           // img.setAttribute("src", "image1.png");
+        }
+    </script>
+</head>
+<body>
+    <button onclick="jeju()">제주도로</button>
+    <button onclick="japan()">일본으로</button>
+    <button onclick="usa()">하와이로</button>
+    <hr style="background: red;">
+    <h3>떠나자!!!</h3>
+    <img src="ok.png"  width = "300" height="200" id="img">
+</body>
+</html>

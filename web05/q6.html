@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function check() {           
+            //1. 입력한 값 가지고 오기
+            let user = document.querySelector("#user").value;//summer
+
+            //2. 기존의 회원id목록
+            let list = ["apple", "root", "admin"];
+            let result = list.includes(user);
+
+            //3. 입력한 값이 list에 포함되어있으면 X
+            //--> 포함되어있으면 사용불가능한 id로 프린트
+            //    포함되어있지 않으면 사용가능한 id로 프린트
+            //4. 프린트는 result태그를 획득 후 innerHTML로 넣기
+            let resultTag = document.querySelector("#result");
+            let text = result ? "가입불가능한 아이디" : "가입가능한아이디";
+            //삼항연산자 조건? true일때의 값 : false일때의 값
+            // let text = "가입가능한 아이디";
+            // if (text) {
+            //     text = "가입불가능한 아이디";
+            // }
+            resultTag.innerHTML = text;
+        }
+        function phone() {
+            //입력
+            let phone = document.getElementById("phone").value;
+            //처리, 인증번호는 5자리
+            let number = "";//undefined(초기화가 X)
+            //앞자리 2자리 ==> 010(01), 011(02), 기타(03)
+            let pre = phone.substring(0, 3); //010
+            if (pre == '010') {
+                number = "01";
+            }else if (pre == '011') {
+                number = "02";
+            }else{
+                number = "03";
+            }
+            //뒷자리 3자리 ==> 랜덤한 값(100 ~ 999)
+            let post = Math.floor(Math.random() * 900) + 100;
+/*
+            1. Math.random() : 0~ 1미만의 소수점
+                0.123342424242, 0.4545674764, 0.0000023424
+            2. 900을 곱하면
+                112.453535, 434.3453646, 0.0002342
+            3. Math.floor()
+                112, 434, 0
+            4. +100
+                212, 534, 100
+*/
+            //출력
+            let result2 = document.getElementById("result2");
+            result2.innerHTML = "인증번호: " + number + post;
+        }
+    </script>
+</head>
+
+<body>
+    ID입력: <input type="text" class="form-control" id="user" value="summer">
+    <button class="btn btn-info" onclick="check()">회원가입시 ID중복 체크</button>
+    <hr>
+    <div id="result"></div>
+    <hr>
+    전화번호 입력: <input type="text" class="form-control" id="phone" value="0112451234">
+    <button class="btn btn-info" onclick="phone()">인증번호 받기</button>
+    <hr>
+    <div id="result2"></div>
+
+</body>
+
+</html>
